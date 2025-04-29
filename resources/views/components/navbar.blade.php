@@ -11,11 +11,23 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown
+                        Articoli
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="{{ route('article.index') }}">tutti gli articoli</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorie
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                @foreach ($categories as $category)
+                                    <li><a class="dropdown-item text-capitalize" href="#">{{ $category->name }}</a></li>
+                                    @if (!$loop->last)
+                                        <hr class="dropdown-divider">  
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

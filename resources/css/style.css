@@ -1,0 +1,26 @@
+/* dropdown-submenu-start */
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    border: 1px solid #ccc;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu .dropdown-menu li {
+    padding: 1px;
+    height: 25px;
+    line-height: 20px;
+    text-justify: center;
+}
+
+/* dropdown-submenu-end */
