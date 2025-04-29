@@ -6,6 +6,13 @@
         </div>
     @endif
 
+    @if (session()->has('message'))
+    <div class="alert alert-success text-center">
+        {{ session('message') }}
+    </div>
+@endif
+
+
     <div class="container-fluid text-center bg-body-tertiary">
         <div class="row vh-100 justify-content-center align-items-center">
             <div class="col-12">
