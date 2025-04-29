@@ -24,3 +24,10 @@
 }
 
 /* dropdown-submenu-end */
+
+/* notifiche start*/
+.bi-bell:hover::before {
+    content: "\F189"; /* codice dell'icona bi-bell-fill */
+}
+
+/* notifiche end */

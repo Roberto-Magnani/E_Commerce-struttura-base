@@ -41,10 +41,12 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex me-2" role="search">
+
+            <!-- Search -->
+            <form class="d-flex me-2" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">
+                    <button class="input-group-text btn btn-outline-success" type="submit" id="basic-addon2">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
@@ -55,12 +57,6 @@
             <button type="button" class="btn btn-secondary me-2">
                 <i class="bi bi-bell"></i>
             </button>
-            <style>
-                .bi-bell:hover {
-                    content: "\f3d1";
-                    /* codice dell'icona bi-bell-fill */
-                }
-            </style>
 
             @auth
                 <!-- Profile dropdown -->
