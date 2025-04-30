@@ -53,10 +53,23 @@
             </form>
         </div>
 
+        {{-- notifiche --}}
         <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-secondary me-2">
+            <button type="button" class="btn btn-secondary me-2" style="width: 40px; height: 40px;">
                 <i class="bi bi-bell"></i>
             </button>
+
+            {{-- lingue --}}
+            <div class="dropdown">
+                <button class="btn btn-secondary m-0 p-0 rounded-circle" type="button" id="language-menu-button"
+                    data="Language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <x-_locale lang="it" />
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="language-menu-button">
+                    <li><x-_locale lang="en" /></li>
+                    <li><x-_locale lang="es" /></li>
+                </ul>
+            </div>
 
             @auth
                 <!-- Profile dropdown -->
